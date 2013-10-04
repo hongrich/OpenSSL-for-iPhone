@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   s.license	 = 'OpenSSL (OpenSSL/SSLeay)'
 
   s.author       = { 'Rich Hong' => 'hong.rich@gmail.com' }
-  s.source       = { :git => ".", :tag => "openssl-1.0.1e" }
+  s.source       = { :git => "https://github.com/hongrich/OpenSSL-for-iPhone.git", :tag => "openssl-1.0.1e" }
 
   s.platform     = :ios, '7.0'
   s.source_files = 'include/openssl/**/*.h'
   s.public_header_files = 'include/openssl/**/.h'
-  s.preserve_paths = 'lib/libcrypto.a', 'lib/libssl.a'
+  s.preserve_paths = 'lib/**/*.a'
   s.library	  = 'crypto', 'ssl'
   s.xcconfig	 = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenSSL/lib"' }
 end
